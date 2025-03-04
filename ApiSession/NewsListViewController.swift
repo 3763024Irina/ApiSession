@@ -49,7 +49,7 @@ class NewsListViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     // Загрузка новостей из API
     private func fetchNews() {
-        guard let url = URL(string: "https://newsapi.org/v2/everything?q=tesla&from=2025-02-03&sortBy=publishedAt&apiKey=03f49428cd32430798305a7b47f0a692") else { return }
+        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=03f49428cd32430798305a7b47f0a692") else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else { return }
